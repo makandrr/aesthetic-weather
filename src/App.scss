@@ -1,0 +1,13 @@
+@use '@scss/primitives.scss';
+@import '@scss/modularScale.scss';
+
+.app {
+    @include primitives.with-sidebar(modular-scale(11));
+    background-image: url('/storm.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    gap: 0;
+    
+    color: #e4e4e4;
+}

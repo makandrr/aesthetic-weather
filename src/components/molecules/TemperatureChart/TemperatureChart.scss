@@ -1,0 +1,16 @@
+#temp-chart {
+    .tick line, .domain {
+        opacity: 0;
+    }
+    text {
+        font-size: 1rem;
+        font-family: var(--primary-font);
+        font-weight: 200;
+        color: #ddd;
+    }
+    #tempNumber {
+        font-size: 3rem;
+        fill: #d1be7a;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,54 @@
+@use '@scss/primitives.scss';
+@import '@scss/modularScale.scss';
+
+.cities-chart {
+    .cc-content {
+        min-width: 1200px;
+        @include primitives.stack(modular-scale(-3));
+    }
+}
+
+.cc-top, .cc-bottom {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding-inline: 80px;
+}
+
+.cc-top {
+    font-size: modular-scale(-1);
+    & > div {
+        @include primitives.stack(modular-scale(-1));
+    }
+}
+
+#cc-chart {
+    width: 100%;
+    aspect-ratio: 1200 / 100;
+}
+
+.cc-bottom {
+    & > div {
+        @include primitives.stack(modular-scale(1));
+    }
+    .degree {
+        font-size: modular-scale(5);
+        font-weight: 200;
+        line-height: 1;
+    }
+    .lines {
+        @include primitives.stack(modular-scale(-4));
+        margin-top: modular-scale(-1)
+    }
+    .line {
+        height: 3px;
+        width: 100%;
+    }
+    .line1 {
+        background-color: #ffd081;
+        width: 60%;
+    }
+    .line2 {
+        background-color: #b19d71;
+        width: 40%;
+    }
+}
