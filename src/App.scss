@@ -1,5 +1,5 @@
-@use '@scss/primitives.scss';
-@import '@scss/modularScale.scss';
+@use './scss/primitives.scss';
+@import './scss/modularScale.scss';
 
 .app {
     @include primitives.with-sidebar(modular-scale(11));

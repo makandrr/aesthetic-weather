@@ -1,4 +1,4 @@
-@import '@scss/modularScale.scss';
+@import './modularScale.scss';
 
 @mixin stack($space: modular-scale(0)) {
     display: flex;
