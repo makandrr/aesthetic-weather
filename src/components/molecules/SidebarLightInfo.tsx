@@ -1,12 +1,16 @@
 import LightCircles from '../atoms/LightCircles'
+import { useContext } from 'react'
+import WeatherDataContext from '../../WeatherDataContext'
 
 export default function SidebarLightInfo({ className = '' }) {
+    const weatherData = useContext(WeatherDataContext)
+
     return (
         <div className={`sidebar-light-info ${className}`}>
             <div className="flex justify-between items-end">
                 <LightCircles />
                 <div className="font-extralight tracking-widest leading-none text-2xl">
-                    .5%
+                    {weatherData.current.uv}%
                 </div>
             </div>
 

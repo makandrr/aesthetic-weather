@@ -5,14 +5,22 @@ import SidebarPrimaryInfo from '../molecules/SidebarPrimaryInfo'
 import SidebarLightInfo from '../molecules/SidebarLightInfo'
 import LocationInfo from '../atoms/LocationInfo'
 
-export default function Sidebar() {
+export default function Sidebar({
+    onSearch = (_) => {},
+}: {
+    onSearch: (query: string) => void
+}) {
     return (
         <div className="p-5 backdrop-blur-xl border-r-2 border-gray-500 rounded-r-3xl flex flex-col">
-            <SearchInput icon={<FaTemperatureHalf />} placeholder="Location" />
+            <SearchInput
+                icon={<FaTemperatureHalf />}
+                placeholder="Location"
+                onSearch={(query) => onSearch(query)}
+            />
             <SidebarPrimaryInfo className="mt-12" />
             <SidebarLightInfo className="mt-10" />
             <TemperatureChart className="mt-auto mb-auto" />
-            <LocationInfo />
+            <LocationInfo className="mt-28" />
         </div>
     )
 }

@@ -37,6 +37,7 @@
     }
     .lines {
         @include primitives.stack(modular-scale(-4));
+        max-width: 70%;
         margin-top: modular-scale(-1)
     }
     .line {
